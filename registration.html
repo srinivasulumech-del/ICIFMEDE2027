@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Registration - ICIFMEDE 2027</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+        }
+
+        /* HEADER */
+
+        .registration-header {
+            background-color: #173f73;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .registration-header h1 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .registration-header p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+
+        /* MAIN CONTENT */
+
+        .registration-content {
+            max-width: 1100px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+
+        /* TITLE */
+
+        .registration-content h2 {
+            color: #173f73;
+            text-align: center;
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+
+        /* INSTRUCTIONS */
+
+        .instructions {
+            background-color: #f1f5fa;
+            padding: 25px 30px;
+            border-left: 5px solid #173f73;
+            border-radius: 8px;
+            margin-bottom: 35px;
+        }
+
+        .instructions h3 {
+            color: #173f73;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .instructions ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .instructions li {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+
+        /* IMPORTANT NOTE */
+
+        .important-note {
+            background-color: #fff8e6;
+            padding: 20px 25px;
+            border-left: 5px solid #173f73;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .important-note h3 {
+            color: #173f73;
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .important-note p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+
+        /* FORM */
+
+        .registration-form {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .registration-form h3 {
+            color: #173f73;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .registration-form label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .registration-form input,
+        .registration-form select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 7px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .registration-form input:focus,
+        .registration-form select:focus {
+            outline: none;
+            border: 2px solid #173f73;
+        }
+
+
+        /* SUBMIT BUTTON */
+
+        .registration-form button {
+            display: block;
+            margin: 10px auto 0 auto;
+            padding: 13px 30px;
+            background-color: #173f73;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .registration-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .registration-header h1 {
+                font-size: 30px;
+            }
+
+            .registration-content {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            .registration-content h2 {
+                font-size: 27px;
+            }
+
+        }
+.page-nav {
+
+    width: 100%;
+
+    background-color: #0b2d63;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    padding: 14px 10px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.page-nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    margin: 0 17px;
+
+    padding: 4px 2px;
+
+    transition: 0.3s;
+}
+
+
+.page-nav a:hover {
+
+    color: #ffd400;
+}
+    </style>
+
+</head>
+
+
+<body>
+
+<nav class="page-nav">
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="call-for-papers.html">Call for Papers</a>
+
+    <a href="important-dates.html">Important Dates</a>
+
+    <a href="keynote-speakers.html">Keynote Speakers</a>
+
+    <a href="registration.html">Registration</a>
+
+    <a href="contact.html">Contact</a>
+
+</nav>
+    <!-- HEADER -->
+
+    <div class="registration-header">
+
+        <h1>CONFERENCE REGISTRATION</h1>
+
+        <p>ICIFMEDE 2027</p>
+
+    </div>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <div class="registration-content">
+
+        <h2>Registration Guidelines</h2>
+
+
+        <!-- INSTRUCTIONS -->
+
+        <div class="instructions">
+
+            <h3>Instructions for Registration</h3>
+
+            <ul>
+
+                <li>
+                    Participants are requested to carefully read the conference
+                    information and registration guidelines before completing
+                    the registration form.
+                </li>
+
+                <li>
+                    Please enter your full name, email address, mobile number
+                    and institutional details accurately.
+                </li>
+
+                <li>
+                    Authors should provide the paper title exactly as submitted
+                    for the conference.
+                </li>
+
+                <li>
+                    Please select the appropriate conference track based on
+                    the subject area of your research.
+                </li>
+
+                <li>
+                    All mandatory fields must be completed before submitting
+                    the registration form.
+                </li>
+
+                <li>
+                    Authors are advised to complete registration after receiving
+                    the paper acceptance notification, wherever applicable.
+                </li>
+
+                <li>
+                    Registration fee details and payment instructions will be
+                    provided separately by the conference organizing committee.
+                </li>
+
+                <li>
+                    Participants are requested to retain their registration
+                    confirmation and payment details for future reference.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- IMPORTANT NOTE -->
+
+        <div class="important-note">
+
+            <h3>Important Note</h3>
+
+            <p>
+                Registration and paper acceptance are separate processes.
+                Submission of a registration form does not guarantee paper
+                acceptance. Paper acceptance will be based on the conference
+                review process and the decision of the organizing committee.
+            </p>
+
+        </div>
+
+
+
+        <!-- REGISTRATION FORM -->
+
+        <div class="registration-form">
+
+            <h3>Registration Form</h3>
+
+
+            <form>
+
+
+                <label>Full Name *</label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+                <label>Email Address *</label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+
+                <label>Mobile Number *</label>
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Enter your mobile number"
+                    required
+                >
+
+
+                <label>Institution / University *</label>
+
+                <input
+                    type="text"
+                    name="institution"
+                    placeholder="Enter your institution or university"
+                    required
+                >
+
+
+                <label>Paper Title</label>
+
+                <input
+                    type="text"
+                    name="paper"
+                    placeholder="Enter your paper title"
+                >
+
+
+                <label>Participant Category *</label>
+
+                <select name="category" required>
+
+                    <option value="" selected disabled>
+                        Select Participant Category
+                    </option>
+
+                    <option value="Research Scholar">
+                        Research Scholar
+                    </option>
+
+                    <option value="Faculty">
+                        Faculty / Academician
+                    </option>
+
+                    <option value="Student">
+                        Student
+                    </option>
+
+                    <option value="Industry Professional">
+                        Industry Professional
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <label>Conference Track *</label>
+
+                <select name="track" required>
+
+                    <option value="" selected disabled>
+                        Select Conference Track
+                    </option>
+
+                    <option value="Thermo-Fluids">
+                        Recent Advancements in Thermo-Fluids
+                    </option>
+
+                    <option value="Design Engineering">
+                        Recent Advancements in Design Engineering
+                    </option>
+
+                    <option value="Material and Manufacturing Engineering">
+                        Recent Advancements in Material and Manufacturing Engineering
+                    </option>
+
+                </select>
+
+
+                <label>Participation Type *</label>
+
+                <select name="participation" required>
+
+                    <option value="" selected disabled>
+                        Select Participation Type
+                    </option>
+
+                    <option value="Paper Presentation">
+                        Paper Presentation
+                    </option>
+
+                    <option value="Poster Presentation">
+                        Poster Presentation
+                    </option>
+
+                    <option value="Delegate">
+                        Delegate / Participant
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Submit Registration
+                </button>
+
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ICIFMEDE 2027 | International Conference</title>
+
+
+    <style>
+
+        /* =====================================================
+           BASIC RESET
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+
+        /* =====================================================
+           TOP HEADER
+        ===================================================== */
+
+        .conference-header {
+
+            background: white;
+
+            display: grid;
+
+            grid-template-columns:
+                230px
+                125px
+                1fr
+                330px;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 8px 35px;
+
+            min-height: 125px;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+
+        /* =====================================================
+           ANURAG UNIVERSITY LOGO
+        ===================================================== */
+
+        .university-logo {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .university-logo img {
+
+            width: 205px;
+
+            height: auto;
+
+            display: block;
+        }
+
+
+        /* =====================================================
+           ICIFMEDE LOGO
+        ===================================================== */
+
+        .conference-logo {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .conference-logo img {
+
+            width: 90px;
+
+            height: 90px;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
+
+        /* =====================================================
+           ICIFMEDE NAME + DATE
+        ===================================================== */
+
+        .header-main {
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: flex-start;
+
+            padding-left: 10px;
+        }
+
+        .conference-name {
+
+            color: #123f73;
+
+            font-size: 38px;
+
+            font-weight: 800;
+
+            line-height: 1.1;
+
+            margin-bottom: 8px;
+
+            white-space: nowrap;
+        }
+
+        .conference-date {
+
+            color: #123f73;
+
+            font-size: 21px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-weight: 500;
+        }
+
+        .calendar-icon {
+
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           RIGHT SIDE TAGLINE
+        ===================================================== */
+
+        .header-tagline {
+
+            text-align: center;
+
+            color: #173f73;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-style: italic;
+
+            font-weight: bold;
+
+            line-height: 1.35;
+        }
+
+        .tagline-main {
+
+            font-size: 20px;
+
+            word-spacing: 5px;
+        }
+
+        .tagline-sub {
+
+            display: block;
+
+            font-size: 17px;
+
+            margin-top: 8px;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+
+            background: #0b2d63;
+
+            text-align: center;
+
+            padding: 14px 10px;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            margin: 0 17px;
+
+            padding: 3px 2px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+
+            color: #ffd400;
+        }
+
+
+        /* =====================================================
+           HERO / BANNER
+           
+           IMAGE = BACKGROUND ONLY
+           TEXT = HTML + CSS
+        ===================================================== */
+
+        .hero {
+
+            width: 100%;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: #173f73;
+        }
+
+
+        /* Background image */
+
+        .hero-background {
+
+            width: 100%;
+
+            height: auto;
+
+            min-height: 560px;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+
+        /* =====================================================
+           HTML TEXT OVER THE IMAGE
+        ===================================================== */
+
+        .hero-content {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 25px 30px;
+        }
+
+
+        /* =====================================================
+           FIRST TITLE
+        ===================================================== */
+
+        .conference-line {
+
+            color: white;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(24px, 3vw, 45px);
+
+            font-weight: 800;
+
+            line-height: 1.2;
+
+            margin-bottom: 12px;
+
+            text-shadow:
+                2px 3px 6px rgba(0, 0, 0, 0.9);
+        }
+
+
+        /* Superscript nd */
+
+        .conference-line sup {
+
+            font-size: 0.55em;
+
+            vertical-align: super;
+
+            line-height: 0;
+        }
+
+
+        /* =====================================================
+           MAIN TITLE
+        ===================================================== */
+
+        .main-title {
+
+            color: #f7b500;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(28px, 4vw, 60px);
+
+            font-weight: 900;
+
+            line-height: 1.12;
+
+            text-align: center;
+
+            text-shadow:
+                3px 4px 7px rgba(0, 0, 0, 0.9);
+        }
+
+
+        /* =====================================================
+           DIGITAL ERA
+        ===================================================== */
+
+        .digital-line {
+
+            color: white;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(21px, 2.8vw, 41px);
+
+            font-weight: 800;
+
+            line-height: 1.2;
+
+            margin-top: 15px;
+
+            text-shadow:
+                2px 3px 6px rgba(0, 0, 0, 0.9);
+        }
+
+
+        /* =====================================================
+           DIVIDER
+        ===================================================== */
+
+        .hero-divider {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 20px;
+
+            margin-top: 20px;
+
+            margin-bottom: 12px;
+        }
+
+        .hero-divider span {
+
+            display: block;
+
+            width: clamp(70px, 13vw, 200px);
+
+            height: 4px;
+
+            background: #f7b500;
+
+            border-radius: 5px;
+        }
+
+        .hero-divider b {
+
+            color: white;
+
+            font-size: 34px;
+
+            line-height: 1;
+
+            text-shadow:
+                2px 3px 5px rgba(0, 0, 0, 0.9);
+        }
+
+
+        /* =====================================================
+           BANNER DATE
+        ===================================================== */
+
+        .hero-date {
+
+            color: white;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(23px, 3vw, 44px);
+
+            font-weight: 900;
+
+            line-height: 1.2;
+
+            text-shadow:
+                2px 3px 6px rgba(0, 0, 0, 0.9);
+        }
+
+
+        /* =====================================================
+           WELCOME SECTION
+        ===================================================== */
+
+        .intro {
+
+            max-width: 1200px;
+
+            margin: 45px auto 35px;
+
+            padding: 10px 40px 20px;
+
+            text-align: center;
+        }
+
+        .intro h2 {
+
+            color: #123f75;
+
+            font-size: 32px;
+
+            margin-bottom: 18px;
+        }
+
+        .intro p {
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            max-width: 1100px;
+
+            margin: 12px auto;
+        }
+
+
+        /* =====================================================
+           QUICK INFORMATION
+        ===================================================== */
+
+        .quick-info {
+
+            max-width: 1200px;
+
+            margin: 25px auto 55px;
+
+            padding: 0 20px;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        /* INFO CARD */
+
+        .info-card {
+
+            background: white;
+
+            text-align: center;
+
+            padding: 25px 15px;
+
+            border-radius: 10px;
+
+            border-top: 5px solid #123f75;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.10);
+
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 7px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-card h3 {
+
+            color: #123f75;
+
+            font-size: 19px;
+
+            margin: 8px 0 12px;
+        }
+
+        .info-card p {
+
+            font-size: 15px;
+
+            line-height: 1.5;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           LOWER SECTION
+        ===================================================== */
+
+        .lower-section {
+
+            max-width: 1200px;
+
+            margin: 0 auto 60px;
+
+            padding: 0 20px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+        }
+
+
+        /* =====================================================
+           CONFERENCE HIGHLIGHTS
+        ===================================================== */
+
+        .highlights {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.10);
+        }
+
+        .highlights h2,
+        .dates h2 {
+
+            color: #123f75;
+
+            font-size: 27px;
+
+            margin-top: 0;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* HIGHLIGHT GRID */
+
+        .highlight-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+
+        /* HIGHLIGHT CARD */
+
+        .highlight-card {
+
+            background: #f1f5fa;
+
+            padding: 20px;
+
+            border-radius: 8px;
+
+            text-align: center;
+        }
+
+        .highlight-card h3 {
+
+            color: #123f75;
+
+            font-size: 17px;
+
+            margin: 5px 0 10px;
+        }
+
+        .highlight-card p {
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           IMPORTANT DATES
+        ===================================================== */
+
+        .dates {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* DATE TABLE */
+
+        .dates-table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            font-size: 14px;
+        }
+
+        .dates-table th {
+
+            background: #123f75;
+
+            color: white;
+
+            padding: 12px;
+
+            text-align: left;
+        }
+
+        .dates-table td {
+
+            padding: 11px;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dates-table tr:nth-child(even) {
+
+            background: #f1f5fa;
+        }
+
+
+        /* =====================================================
+           CALL TO ACTION
+        ===================================================== */
+
+        .cta {
+
+            background: #123f75;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 45px 20px;
+
+            margin-top: 20px;
+        }
+
+        .cta h2 {
+
+            font-size: 30px;
+
+            margin: 0 0 12px;
+        }
+
+        .cta p {
+
+            font-size: 17px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* BUTTON */
+
+        .cta-button {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            padding: 12px 25px;
+
+            margin: 5px;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            background: #ffd400;
+
+            color: #111;
+
+            transition: 0.3s;
+        }
+
+        .cta-button.secondary {
+
+            background: white;
+
+            color: #123f75;
+        }
+
+        .cta-button:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 5px 12px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background: #092653;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+
+            margin: 0 0 12px;
+
+            font-size: 22px;
+        }
+
+        footer p {
+
+            margin: 7px 0;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+        footer a {
+
+            color: white;
+
+            text-decoration: none;
+        }
+
+        footer a:hover {
+
+            color: #ffd400;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .conference-header {
+
+                grid-template-columns:
+                    180px
+                    95px
+                    1fr;
+
+                padding: 10px 20px;
+            }
+
+            .university-logo img {
+
+                width: 170px;
+            }
+
+            .conference-logo img {
+
+                width: 80px;
+
+                height: 80px;
+            }
+
+            .conference-name {
+
+                font-size: 30px;
+            }
+
+            .conference-date {
+
+                font-size: 18px;
+            }
+
+            .header-tagline {
+
+                grid-column: 1 / -1;
+
+                margin-top: 5px;
+            }
+
+            .quick-info {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .lower-section {
+
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+
+                margin: 0 9px;
+
+                font-size: 14px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            .conference-header {
+
+                grid-template-columns: 1fr;
+
+                gap: 8px;
+
+                padding: 15px;
+            }
+
+            .university-logo,
+            .conference-logo,
+            .header-main,
+            .header-tagline {
+
+                grid-column: 1;
+
+                align-items: center;
+
+                text-align: center;
+            }
+
+            .university-logo img {
+
+                width: 180px;
+            }
+
+            .conference-logo img {
+
+                width: 80px;
+
+                height: 80px;
+            }
+
+            .conference-name {
+
+                font-size: 25px;
+
+                white-space: normal;
+
+                text-align: center;
+            }
+
+            .conference-date {
+
+                font-size: 17px;
+
+                justify-content: center;
+            }
+
+            .tagline-main {
+
+                font-size: 17px;
+            }
+
+            .tagline-sub {
+
+                font-size: 15px;
+            }
+
+            nav {
+
+                position: relative;
+
+                line-height: 2;
+            }
+
+            nav a {
+
+                display: inline-block;
+
+                margin: 2px 7px;
+
+                font-size: 13px;
+            }
+
+
+            /* MOBILE HERO */
+
+            .hero-background {
+
+                min-height: 430px;
+
+                object-fit: cover;
+            }
+
+            .hero-content {
+
+                padding: 15px;
+            }
+
+            .conference-line {
+
+                font-size: 21px;
+
+                margin-bottom: 8px;
+            }
+
+            .main-title {
+
+                font-size: 27px;
+
+                line-height: 1.12;
+            }
+
+            .digital-line {
+
+                font-size: 20px;
+
+                margin-top: 10px;
+            }
+
+            .hero-divider {
+
+                gap: 10px;
+
+                margin-top: 15px;
+            }
+
+            .hero-divider span {
+
+                width: 60px;
+
+                height: 3px;
+            }
+
+            .hero-divider b {
+
+                font-size: 27px;
+            }
+
+            .hero-date {
+
+                font-size: 24px;
+            }
+
+
+            /* MOBILE CONTENT */
+
+            .quick-info {
+
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .intro {
+
+                padding: 10px 20px;
+            }
+
+            .intro h2 {
+
+                font-size: 26px;
+            }
+
+            .intro p {
+
+                font-size: 15px;
+
+                text-align: left;
+            }
+
+            .dates {
+
+                overflow-x: auto;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="conference-header">
+
+
+        <!-- ANURAG UNIVERSITY LOGO -->
+
+        <div class="university-logo">
+
+            <img
+                src="images/Anu_logo.png"
+                alt="Anurag University Logo">
+
+        </div>
+
+
+        <!-- SMALL ICIFMEDE LOGO -->
+
+        <div class="conference-logo">
+
+            <img
+                src="images/ICIFMEDE2027_logo.png"
+                alt="ICIFMEDE 2027 Logo">
+
+        </div>
+
+
+        <!-- ICIFMEDE NAME + DATE -->
+
+        <div class="header-main">
+
+            <div class="conference-name">
+
+                ICIFMEDE 2027
+
+            </div>
+
+
+            <div class="conference-date">
+
+                <span class="calendar-icon">
+                    ▣
+                </span>
+
+                <span>
+                    10 – 11 June 2027
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE TAGLINE -->
+
+        <div class="header-tagline">
+
+            <div class="tagline-main">
+
+                Innovate &nbsp; | &nbsp;
+                Integrate &nbsp; | &nbsp;
+                Inspire
+
+            </div>
+
+
+            <span class="tagline-sub">
+
+                for a Sustainable Tomorrow
+
+            </span>
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="call-for-papers.html">
+            Call for Papers
+        </a>
+
+        <a href="important-dates.html">
+            Important Dates
+        </a>
+
+        <a href="keynote-speakers.html">
+            Keynote Speakers
+        </a>
+
+        <a href="registration.html">
+            Registration
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         MAIN CONFERENCE BANNER
+
+         IMPORTANT:
+         IMAGE HAS NO TEXT.
+         ALL TEXT BELOW IS HTML.
+    ===================================================== -->
+
+    <section class="hero">
+
+
+        <!-- BACKGROUND IMAGE ONLY -->
+
+        <img
+            src="images/ICIFMEDE_Bannernew.png"
+            alt="ICIFMEDE 2027 Conference Background"
+            class="hero-background">
+
+
+        <!-- =================================================
+             HTML TEXT OVER THE IMAGE
+        ================================================= -->
+
+        <div class="hero-content">
+
+
+            <!-- 2nd INTERNATIONAL CONFERENCE ON -->
+
+            <div class="conference-line">
+
+                2<sup>nd</sup> INTERNATIONAL CONFERENCE ON
+
+            </div>
+
+
+            <!-- MAIN TITLE -->
+
+            <div class="main-title">
+
+                INNOVATIONS AND FUTURE SCOPE OF<br>
+
+                MECHANICAL ENGINEERING
+
+            </div>
+
+
+            <!-- DIGITAL ERA -->
+
+            <div class="digital-line">
+
+                IN DIGITAL ERA (ICIFMEDE 2027)
+
+            </div>
+
+
+            <!-- DIVIDER -->
+
+            <div class="hero-divider">
+
+                <span></span>
+
+                <b>⚙</b>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div class="hero-date">
+
+                10 – 11 June 2027
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WELCOME TO ICIFMEDE 2027
+    ===================================================== -->
+
+    <section class="intro">
+
+
+        <h2>
+            Welcome to ICIFMEDE 2027
+        </h2>
+
+
+        <p>
+
+            ICIFMEDE 2027 brings together researchers,
+            academicians, industry professionals, research
+            scholars and students to exchange knowledge,
+            present innovative research and explore emerging
+            technologies in Mechanical Engineering and related
+            interdisciplinary fields.
+
+        </p>
+
+
+        <p>
+
+            The conference focuses on recent advancements,
+            emerging research directions, technological
+            innovations and future opportunities connecting
+            Mechanical Engineering with the digital era.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK INFORMATION
+    ===================================================== -->
+
+    <section class="quick-info">
+
+
+        <!-- CONFERENCE DATES -->
+
+        <div class="info-card">
+
+            <h3>
+                Conference Dates
+            </h3>
+
+            <p>
+                10 – 11 June 2027
+            </p>
+
+        </div>
+
+
+        <!-- VENUE -->
+
+        <div class="info-card">
+
+            <h3>
+                Venue
+            </h3>
+
+            <p>
+
+                Anurag University<br>
+
+                Hyderabad, Telangana, India
+
+            </p>
+
+        </div>
+
+
+        <!-- CONFERENCE -->
+
+        <div class="info-card">
+
+            <h3>
+                Conference
+            </h3>
+
+            <p>
+                ICIFMEDE 2027
+            </p>
+
+        </div>
+
+
+        <!-- CONFERENCE TYPE -->
+
+        <div class="info-card">
+
+            <h3>
+                Conference Type
+            </h3>
+
+            <p>
+                International Research Conference
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         HIGHLIGHTS + IMPORTANT DATES
+    ===================================================== -->
+
+    <section class="lower-section">
+
+
+        <!-- =================================================
+             CONFERENCE HIGHLIGHTS
+        ================================================= -->
+
+        <div class="highlights">
+
+
+            <h2>
+                Conference Highlights
+            </h2>
+
+
+            <div class="highlight-grid">
+
+
+                <!-- RESEARCH & INNOVATION -->
+
+                <div class="highlight-card">
+
+                    <h3>
+                        Research &amp; Innovation
+                    </h3>
+
+                    <p>
+
+                        Present innovative research,
+                        emerging technologies and new ideas.
+
+                    </p>
+
+                </div>
+
+
+                <!-- EMERGING TECHNOLOGIES -->
+
+                <div class="highlight-card">
+
+                    <h3>
+                        Emerging Technologies
+                    </h3>
+
+                    <p>
+
+                        Explore advancements in AI,
+                        digital engineering, manufacturing,
+                        materials and energy systems.
+
+                    </p>
+
+                </div>
+
+
+                <!-- INDUSTRY ACADEMIA -->
+
+                <div class="highlight-card">
+
+                    <h3>
+                        Industry–Academia Interaction
+                    </h3>
+
+                    <p>
+
+                        Encourage knowledge exchange and
+                        meaningful collaboration between
+                        academia and industry.
+
+                    </p>
+
+                </div>
+
+
+                <!-- INTERDISCIPLINARY -->
+
+                <div class="highlight-card">
+
+                    <h3>
+                        Interdisciplinary Collaboration
+                    </h3>
+
+                    <p>
+
+                        Connect Mechanical Engineering with
+                        emerging interdisciplinary research
+                        areas.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             IMPORTANT DATES
+        ================================================= -->
+
+        <div class="dates">
+
+
+            <h2>
+                Important Dates
+            </h2>
+
+
+            <table class="dates-table">
+
+
+                <tr>
+
+                    <th>
+                        Event
+                    </th>
+
+                    <th>
+                        Date
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Abstract Submission Deadline
+                    </td>
+
+                    <td>
+                        31 January 2027
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Full Paper Submission Deadline
+                    </td>
+
+                    <td>
+                        28 February 2027
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Notification of Acceptance
+                    </td>
+
+                    <td>
+                        31 March 2027
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Camera-Ready Paper Submission
+                    </td>
+
+                    <td>
+                        30 April 2027
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Conference
+                    </td>
+
+                    <td>
+                        10 – 11 June 2027
+                    </td>
+
+                </tr>
+
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CALL TO ACTION
+    ===================================================== -->
+
+    <section class="cta">
+
+
+        <h2>
+            Be Part of ICIFMEDE 2027
+        </h2>
+
+
+        <p>
+
+            Share your research, connect with experts and
+            contribute to the future of Mechanical Engineering
+            in the digital era.
+
+        </p>
+
+
+        <a
+            href="call-for-papers.html"
+            class="cta-button">
+
+            Submit Your Paper
+
+        </a>
+
+
+        <a
+            href="registration.html"
+            class="cta-button secondary">
+
+            Register Now
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+
+        <h3>
+            ICIFMEDE 2027
+        </h3>
+
+
+        <p>
+
+            2<sup>nd</sup> International Conference on
+            Innovations and Future Scope of Mechanical
+            Engineering in Digital Era
+
+        </p>
+
+
+        <p>
+
+            Anurag University,
+            Hyderabad, Telangana, India
+
+        </p>
+
+
+        <p>
+
+            Email:
+
+            <a href="mailto:icifmede2027@anurag.edu.in">
+
+                icifmede2027@anurag.edu.in
+
+            </a>
+
+        </p>
+
+
+        <p>
+
+            Website:
+
+            <a
+                href="https://icifmede.in"
+                target="_blank">
+
+                icifmede.in
+
+            </a>
+
+        </p>
+
+
+        <p>
+
+            © 2027 ICIFMEDE. All Rights Reserved.
+
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>
